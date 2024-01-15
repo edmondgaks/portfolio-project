@@ -6,7 +6,7 @@
   font-family: Perpetua Titling MT;
 }
 
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -19,13 +19,21 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #0C0C0C;
     background-color: #ffffff;
+  }
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #ffffff;
+    background-color: #0C0C0C;
   }
   
 }
