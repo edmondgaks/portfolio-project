@@ -19,8 +19,8 @@ function App() {
   }, [carousel]);
 
   return (
-    <div className={`h-full w-full ${isDarkMode ? 'dark' : ''}`}>
-      <div className={`h-[10vh] shadow-md w-full flex flex-row items-center justify-around ${isDarkMode ? 'bg-[#0C0C0C] shadow-lg backdrop-blur-md' : 'bg-[#FFFDFB]'}`}>
+    <div className={`h-full w-full ${isDarkMode ? 'bg-[#0C0C0C] shadow-lg backdrop-blur-md' : 'bg-[#FFFDFB]'}`}>
+      <div className={`h-[10vh] shadow-md w-full flex flex-row items-center justify-around`}>
         <p className={`text-base font-sans font-light ${isDarkMode ? 'text-[#FFFFFF99]' : 'text-[#0C0C0C]'}`}>ABOUT ME</p>
         <p className={`text-base font-sans font-light ${isDarkMode ? 'text-[#FFFFFF99]' : 'text-[#0C0C0C]'}`}>WORKS</p>
         <p className={`text-xl font-medium perpetua ${isDarkMode ? 'text-white' : 'text-black'} -ml-12`}>RANDY SIMONY</p>
@@ -69,7 +69,7 @@ function App() {
           <img src="/Rectangle 1.png" className="" width={500}  />
         </div>
       </div>
-      <div className={`flex gap-4 flex-col justify-center items-center`}>
+      <div className={`flex gap-4 h-[100vh] flex-col justify-around items-center`}>
         <h1 className="perpetua text-3xl font-medium">ABOUT <span className="text-[#FFBA00]">RANDY SIMMONY</span></h1>
         <p className="font-sans text-center w-[70%] text-sm text-[#C7C5C2] font-light">I am driven by the pursuit of the intangible, conjuring forth the	abstracted realities that dwell just beyond the periphery of perception. My art is 	an invitation to viewers: to delve into the visual manifestations of mindscapes, to 	grapple with the intangible, and to find solace in the shared quest to understand the immeasurable dimensions of being.</p>
         <motion.div ref={carousel} className="carousel">
