@@ -5,6 +5,20 @@
 .perpetua {
   font-family: Perpetua Titling MT;
 }
+.montserat {
+  font-family: Montserrat;
+}
+
+
+.dark-bg {
+  background: 
+  radial-gradient(circle at center, #FFBA00 0%, #FFBA00 100%),
+    radial-gradient(circle at center, #FF6B00 0%, #FF6B00 100%),
+    linear-gradient(#0C0C0C, #0C0C0C),
+    #0C0C0C 70%,
+    #FFFFFF 75%
+  ,
+}
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
