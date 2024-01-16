@@ -1,6 +1,6 @@
 import { Dribbble, Facebook, Instagram, Moon, Sun, Twitter } from 'lucide-react';
 import './App.css';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import images from './components/Images';
 function App() {
@@ -10,7 +10,13 @@ function App() {
     setIsDarkMode(!isDarkMode);
   };
   const [width, setWidth] = useState(0);
-  const carousel = useRef();
+  const carousel = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (carousel.current) {
+      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    }
+  }, [carousel]);
 
   return (
     <div className={`h-full w-full ${isDarkMode ? 'dark' : ''}`}>
@@ -67,7 +73,7 @@ function App() {
         <h1 className="perpetua text-3xl font-medium">ABOUT <span className="text-[#FFBA00]">RANDY SIMMONY</span></h1>
         <p className="font-sans text-center w-[70%] text-sm text-[#C7C5C2] font-light">I am driven by the pursuit of the intangible, conjuring forth the	abstracted realities that dwell just beyond the periphery of perception. My art is 	an invitation to viewers: to delve into the visual manifestations of mindscapes, to 	grapple with the intangible, and to find solace in the shared quest to understand the immeasurable dimensions of being.</p>
         <motion.div ref={carousel} className="carousel">
-          <motion.div drag="x" dragConstraints={{ right: 0 }} className="inner-carousel">
+          <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className="inner-carousel">
             {images.map((image) => {
               return (
                 <motion.div className="item">
