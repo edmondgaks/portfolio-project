@@ -1,7 +1,8 @@
 import { Dribbble, Facebook, Instagram, Moon, Sun, Twitter } from 'lucide-react';
 import './App.css';
 import { useRef, useState } from 'react';
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import images from './components/Images';
 function App() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
 
@@ -67,21 +68,13 @@ function App() {
         <p className="font-sans text-center w-[70%] text-sm text-[#C7C5C2] font-light">I am driven by the pursuit of the intangible, conjuring forth the	abstracted realities that dwell just beyond the periphery of perception. My art is 	an invitation to viewers: to delve into the visual manifestations of mindscapes, to 	grapple with the intangible, and to find solace in the shared quest to understand the immeasurable dimensions of being.</p>
         <motion.div ref={carousel} className="carousel">
           <motion.div drag="x" dragConstraints={{ right: 0 }} className="inner-carousel">
-            <motion.div className="item">
-              <img src={"/az.png"} alt="" />
-            </motion.div>
-            <motion.div className="item">
-              <img src={"/az.png"} alt="" />
-            </motion.div>
-            <motion.div className="item">
-              <img src={"/az.png"} alt="" />
-            </motion.div>
-            <motion.div className="item">
-              <img src={"/az.png"} alt="" />
-            </motion.div>
-            <motion.div className="item">
-              <img src={"/az.png"} alt="" />
-            </motion.div>
+            {images.map((image) => {
+              return (
+                <motion.div className="item">
+                  <img src={image} alt="" />
+                </motion.div>
+              )
+            })}
           </motion.div>
         </motion.div>
       </div>
