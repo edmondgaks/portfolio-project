@@ -85,6 +85,9 @@ function App() {
         </motion.div>
       </div>
 
+      <div className={`flex gap-4 mt-10 flex-col justify-around items-center`}>
+        <h1 className="perpetua text-3xl font-medium">RANDY <span className="text-[#FFBA00]">GALLERY</span></h1>
+      </div>
     </div>
   );
 }
