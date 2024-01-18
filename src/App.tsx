@@ -23,7 +23,7 @@ function App() {
       <div className={`h-[10vh] shadow-md w-full flex flex-row items-center justify-around`}>
         <p className={`text-base font-sans font-light ${isDarkMode ? 'text-[#FFFFFF99]' : 'text-[#0C0C0C]'}`}>ABOUT ME</p>
         <p className={`text-base font-sans font-light ${isDarkMode ? 'text-[#FFFFFF99]' : 'text-[#0C0C0C]'}`}>WORKS</p>
-        <p className={`text-xl font-medium perpetua ${isDarkMode ? 'text-white' : 'text-black'} -ml-12`}>RANDY SIMONY</p>
+       <p className={`text-xl font-medium perpetua ${isDarkMode ? 'text-white' : 'text-black'} -ml-12`}>MADOC PIERCE</p>
         <p className={`text-base font-sans font-light ${isDarkMode ? 'text-[#FFFFFF99]' : 'text-[#0C0C0C]'}`}>CONTACT</p>
         <div onClick={toggleDarkMode} className={`cursor-pointer ${isDarkMode ? 'text-white' : 'text-[#0C0C0C]'}`}>
           {isDarkMode ?
@@ -40,7 +40,7 @@ function App() {
             backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 120%)",
             WebkitBackgroundClip: "text",
             color: "transparent",
-          }}>Randy Simmony</h1>
+          }}>Madoc Pierce</h1>
           <h1 className="text-5xl font-semibold text-white font-sans" style={{
             backgroundImage: "linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 120%)",
             WebkitBackgroundClip: "text",
@@ -70,7 +70,7 @@ function App() {
         </div>
       </div>
       <div className={`flex gap-4 h-[100vh] flex-col justify-around items-center`}>
-        <h1 className="perpetua text-3xl font-medium">ABOUT <span className="text-[#FFBA00]">RANDY SIMMONY</span></h1>
+        <h1 className="perpetua text-3xl font-medium">ABOUT <span className="text-[#FFBA00]">MADOC PIERCE</span></h1>
         <p className="font-sans text-center w-[70%] text-sm text-[#C7C5C2] font-light">I am driven by the pursuit of the intangible, conjuring forth the	abstracted realities that dwell just beyond the periphery of perception. My art is 	an invitation to viewers: to delve into the visual manifestations of mindscapes, to 	grapple with the intangible, and to find solace in the shared quest to understand the immeasurable dimensions of being.</p>
         <motion.div ref={carousel} className="carousel">
           <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className="inner-carousel">
@@ -86,7 +86,7 @@ function App() {
       </div>
 
       <div className={`flex gap-4 mt-10 flex-col justify-around items-center`}>
-        <h1 className="perpetua text-3xl font-medium">RANDY <span className="text-[#FFBA00]">GALLERY</span></h1>
+        <h1 className="perpetua text-3xl font-medium">PIERCE <span className="text-[#FFBA00]">GALLERY</span></h1>
         <p className="font-sans text-center w-[70%] text-sm text-[#C7C5C2] font-light">These works, like echoes in a void, attempt to visualize the vibrations of 		thought and the frequency of feeling. They are both the echo and the source, the 	question and the answer.</p>
         <div className="p-20">
           <div className="columns-1 lg:columns-3 md:columns-2 [&>img:not(:first-child)]:mt-5 ">
