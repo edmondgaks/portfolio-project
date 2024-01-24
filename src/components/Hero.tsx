@@ -1,7 +1,6 @@
 import { Dribbble, Facebook, Instagram, Twitter } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
-// ${isDarkMode ? "dark-bg" : "bg-[#FFFDFB]"}
 const Hero = () => {
     const { isDarkMode } = useTheme();
     return (
