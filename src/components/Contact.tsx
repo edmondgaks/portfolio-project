@@ -1,3 +1,4 @@
+import { MoveRight } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 
 const Contact = () => {
@@ -27,9 +28,14 @@ const Contact = () => {
           </div>
         </div>
         <div className="mx-auto flex flex-col gap-2">
-        <p className="text-sm text-[#FFBA00] font-medium font-sans">Message:</p>
+          <p className="text-sm text-[#FFBA00] font-medium font-sans">Message:</p>
           <textarea placeholder="Write your message" className="placeholder:text-xs placeholder:text-[#646363] p-2 w-[87vh] border-b-[1px] border-[#858585] bg-[#060503]"></textarea>
         </div>
+        <button type="submit" className="bg-[#FFBA00] px-5 py-3 text-black font-bold text-xs rounded-md flex flex-row items-center gap-4">
+          <p>Send message</p>
+          <div className="w-[1px] h-[30px] bg-black"></div>
+          <MoveRight />
+        </button>
       </div>
     )
 }
