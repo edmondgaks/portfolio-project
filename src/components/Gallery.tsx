@@ -1,22 +1,23 @@
 import { useTheme } from "../context/ThemeContext";
 
+const imageList = [
+  { src: "/az.png", alt: "Image 1" },
+  { src: "/fd.png", alt: "Image 2" },
+  { src: "/ff.png", alt: "Image 3" },
+  { src: "/gg.png", alt: "Image 4" },
+  { src: "/Arabelle.jpg", alt: "Image 5" },
+  { src: "/AuditoriumShores.JPG", alt: "Image 6" },
+  { src: "/Pathways no.5.jpg", alt: "Image 7" },
+  { src: "/Consciousness no.1.jpg", alt: "Image 8" },
+  { src: "/Consciousness no.3.jpg", alt: "Image 9" },
+  { src: "/Bio-architecture no.8.jpg", alt: "Image 10" },
+  { src: "/Bio-architecture no.4.jpg", alt: "Image 11" },
+  { src: "/Chromatic Cortex no.2.jpg", alt: "Image 12" },
+  { src: "/Lungs.jpg", alt: "Image 13" },
+];
+
 const Gallery = () => {
     const { isDarkMode } = useTheme();
-    const imageList = [
-      { src: "/az.png", alt: "Image 1" },
-      { src: "/fd.png", alt: "Image 2" },
-      { src: "/ff.png", alt: "Image 3" },
-      { src: "/gg.png", alt: "Image 4" },
-      { src: "/Arabelle.jpg", alt: "Image 5" },
-      { src: "/AuditoriumShores.JPG", alt: "Image 6" },
-      { src: "/Pathways no.5.jpg", alt: "Image 7" },
-      { src: "/Consciousness no.1.jpg", alt: "Image 8" },
-      { src: "/Consciousness no.3.jpg", alt: "Image 9" },
-      { src: "/Bio-architecture no.8.jpg", alt: "Image 10" },
-      { src: "/Bio-architecture no.4.jpg", alt: "Image 11" },
-      { src: "/Chromatic Cortex no.2.jpg", alt: "Image 12" },
-      { src: "/Lungs.jpg", alt: "Image 13" },
-    ];
     return (
         <div className={`flex gap-4 mt-10 flex-col justify-around items-center`}>
         <h1 className="perpetua text-3xl text-[#FFBA00] font-medium">GALLERY</h1>
