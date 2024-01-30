@@ -4,7 +4,13 @@ import { useTheme } from '../context/ThemeContext';
 const Hero = () => {
     const { isDarkMode } = useTheme();
     return (
-        <div className={`flex h-[90vh] w-full flex-row items-center justify-center dark-bg`}>
+        <div className={`flex h-[90vh] w-full flex-row items-center justify-center`} 
+        style={{
+          backgroundImage: isDarkMode ? "url('/bg-hero.png')" : "url('/bg-hero-white.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}>
         <div className="flex w-[45%] relative flex-col gap-6">
           <h1 className={`text-5xl font-semibold ${isDarkMode ? "text-white" : "text-black"}  font-sans`} style={{
             backgroundImage: isDarkMode ? "linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 120%)" : 

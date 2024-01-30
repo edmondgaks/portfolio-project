@@ -4,7 +4,13 @@ import { useTheme } from "../context/ThemeContext";
 const Contact = () => {
     const { isDarkMode } = useTheme();
     return (
-        <div className={`flex gap-4 mt-10 flex-col justify-around items-center`}>
+        <div className={`flex gap-4 mt-10 flex-col justify-around items-center`}
+        style={{
+          backgroundImage: isDarkMode ? "url('/contact-bg.png)" : "url('/contact-bg-white.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}>
         <h1 className={`perpetua text-3xl ${isDarkMode ? "text-white" : "text-black"} font-medium`}>CONTACT <span className="text-[#ffba00]">ME</span></h1>
         <p className={`font-sans text-center w-[60%] text-sm ${isDarkMode ? "text-[#C7C5C2]" : "text-black"}  placeholder:text-xs font-light`}>My art is an invitation to viewers: to delve into the visual manifestations of mindscapes, to grapple with the intangible, and to find solace in the shared quest to understand the immeasurable dimensions of being.</p>
         <div className="flex flex-row items-center gap-10">

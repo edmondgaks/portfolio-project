@@ -4,7 +4,7 @@ import { useTheme } from '../context/ThemeContext';
 const Navbar = () => {
     const { isDarkMode, toggleDarkMode } = useTheme();
     return (
-        <div className={`h-[10vh] w-full flex flex-row items-center justify-around`}>
+        <div className={`w-full  flex flex-row items-center h-[10vh] mt-2 justify-around ${isDarkMode ? "bg-[#0E0D0C]" : "bg-[#FCF8F4]"}`}>
         <p className={`text-sm font-sans font-light ${isDarkMode ? 'text-[#FFFFFF99]' : 'text-[#0C0C0C]'}`}>ABOUT ME</p>
         <p className={`text-sm font-sans font-light ${isDarkMode ? 'text-[#FFFFFF99]' : 'text-[#0C0C0C]'}`}>WORKS</p>
         <p className={`text-xl font-medium perpetua ${isDarkMode ? 'text-white' : 'text-black'} -ml-12`}>MADOC PIERCE</p>
