@@ -10,19 +10,6 @@ const Gallery = () => {
         <div className={`flex gap-4 mt-10 flex-col justify-around items-center`}>
         <h1 className="perpetua text-3xl text-[#FFBA00] font-medium">GALLERY</h1>
         <p className={`font-sans text-center w-[70%] text-sm ${isDarkMode ? "text-[#C7C5C2]" : "text-black"} font-light`}>These works, like echoes in a void, attempt to visualize the vibrations of 		thought and the frequency of feeling. They are both the echo and the source, the 	question and the answer.</p>
-        {/* <div className="p-20">
-          <div className="columns-1 lg:columns-3 md:columns-2 [&>img:not(:first-child)]:mt-5 ">
-            {imageList.map((image, index) => (
-              <img
-                key={index}
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-                className="w-full h-auto"
-              />
-            ))}
-          </div>
-        </div> */}
         <div className="flex flex-col gap-5">
                 <div className="w-full relative">
                     <div className="absolute left-0 top-[20%] h-screen">
