@@ -1,20 +1,8 @@
 import { useTheme } from "../context/ThemeContext";
-
-const imageList = [
-  { src: "/az.png", alt: "Image 1" },
-  { src: "/fd.png", alt: "Image 2" },
-  { src: "/ff.png", alt: "Image 3" },
-  { src: "/gg.png", alt: "Image 4" },
-  { src: "/Arabelle.jpg", alt: "Image 5" },
-  { src: "/AuditoriumShores.JPG", alt: "Image 6" },
-  { src: "/Pathways no.5.jpg", alt: "Image 7" },
-  { src: "/Consciousness no.1.jpg", alt: "Image 8" },
-  { src: "/Consciousness no.3.jpg", alt: "Image 9" },
-  { src: "/Bio-architecture no.8.jpg", alt: "Image 10" },
-  { src: "/Bio-architecture no.4.jpg", alt: "Image 11" },
-  { src: "/Chromatic Cortex no.2.jpg", alt: "Image 12" },
-  { src: "/Lungs.jpg", alt: "Image 13" },
-];
+import Arts from "./Arts";
+import images from "./Images";
+import bgsec1 from "/bgsec1.png";
+import bgsec2 from "/bgsec2.png";
 
 const Gallery = () => {
     const { isDarkMode } = useTheme();
@@ -22,7 +10,7 @@ const Gallery = () => {
         <div className={`flex gap-4 mt-10 flex-col justify-around items-center`}>
         <h1 className="perpetua text-3xl text-[#FFBA00] font-medium">GALLERY</h1>
         <p className={`font-sans text-center w-[70%] text-sm ${isDarkMode ? "text-[#C7C5C2]" : "text-black"} font-light`}>These works, like echoes in a void, attempt to visualize the vibrations of 		thought and the frequency of feeling. They are both the echo and the source, the 	question and the answer.</p>
-        <div className="p-20">
+        {/* <div className="p-20">
           <div className="columns-1 lg:columns-3 md:columns-2 [&>img:not(:first-child)]:mt-5 ">
             {imageList.map((image, index) => (
               <img
@@ -34,7 +22,27 @@ const Gallery = () => {
               />
             ))}
           </div>
-        </div>
+        </div> */}
+        <div className="flex flex-col gap-5">
+                <div className="w-full relative">
+                    <div className="absolute left-0 top-[20%] h-screen">
+                        <img src={bgsec1} alt="home left" className='hidden sm:block h-4/5' />
+                    </div>
+                    <Arts images={images.slice(0, 12)} />
+                </div>
+                <div className="w-full relative">
+                    <div className="absolute right-0 top-[20%] h-screen">
+                        <img src={bgsec2} alt="home left" className='hidden sm:block h-4/5' />
+                    </div>
+                    <Arts images={images.slice(12, 24)} />
+                </div>
+                <div className="w-full relative">
+                    <div className="absolute left-0 top-[40%] h-screen">
+                        <img src={bgsec1} alt="home left" className='hidden sm:block h-4/5' />
+                    </div>
+                    <Arts images={images.slice(24)} />
+                </div>
+            </div>
       </div>
     )
 }
