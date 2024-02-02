@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { Moon, MoveLeft, Sun } from 'lucide-react';
+import { Moon, MoveLeft, MoveRight, Sun } from 'lucide-react';
 
 interface SingleImagePageProps {
 }
@@ -30,9 +30,37 @@ const SingleImage: FC<SingleImagePageProps> = () => {
                 }
             </div>
         </div>
-        <div className="w-[80%] mx-auto bg-[#18130E] flex flex-row h-[80vh]">
+        <div className={`w-[70%] mx-auto ${isDarkMode ? "bg-[#18130E]" : "bg-[#FBF7F2]"} flex flex-row h-[80vh]`}>
             {imageSrc && <img src={imageSrc} alt="Single Image" className="w-full h-[100%]" />}
-            <div className="w-[80%]">Hello</div>
+            <div className="w-[90%] flex flex-col justify-around items-start mt-10">
+                <div className="w-[70%] mx-auto">
+                    <div className={`w-full flex ${isDarkMode ? "text-white" : "text-black"}  flex-row justify-between  items-center`}>
+                        <p className="text-sm  opacity-90">Title:</p>
+                        <p className="font-semibold text-lg capitalize">THE MYSTERY WORLD</p>
+                    </div>
+                    <div className={`w-full flex ${isDarkMode ? "text-white" : "text-black"} flex-row justify-between  items-center`}>
+                        <p className="text-sm  opacity-90">Size:</p>
+                        <p className="font-semibold text-lg capitalize">780 x 920</p>
+                    </div>
+                    <div className={`w-full flex ${isDarkMode ? "text-white" : "text-black"} flex-row justify-between  items-center`}>
+                        <p className="text-sm  opacity-90">Medium:</p>
+                        <p className="font-semibold text-lg capitalize">Water Based</p>
+                    </div>
+                </div>
+                <div className={`${isDarkMode ? "bg-[#1F1A15]" : "bg-[#F3F0EC]"} shadow-md rounded-md flex flex-col gap-4 py-4 px-6 w-[70%] mx-auto`}>
+                    <h1 className={`text-sm font-semibold ${isDarkMode ? "text-white" : "text-black"}`}>Inquire about availabity:</h1>
+                    <div className="h-[0.2px] w-full bg-[#a1a1a1] mx-auto"></div>
+                    <div className="flex flex-col gap-4">
+                        <p className="text-sm text-[#FFBA00] font-medium font-sans">City/Town:</p>
+                        <input type="text" placeholder="example@gmail.com" className={`p-3 placeholder:text-sm ${isDarkMode ? "text-[#646363]  bg-[#060503]" : "bg-[#E4E2DE] text-black"} placeholder:text-[#646363] border-b-[1px] border-[#858585]`} />
+                        <button type="submit" className={`bg-[#FFBA00] px-4 py-2 ${isDarkMode ? "text-black" : "text-white"} font-bold text-xs rounded-sm flex flex-row items-center gap-4`}>
+                            <p className="w-[80%]">Send message</p>
+                            <div className={`w-[1px] h-[30px] ${isDarkMode ? "bg-black" : "bg-white"}`}></div>
+                            <MoveRight />
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
   );
