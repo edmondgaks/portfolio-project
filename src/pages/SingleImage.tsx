@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { ArrowLeft, Moon, MoveLeft, Sun } from 'lucide-react';
+import { Moon, MoveLeft, Sun } from 'lucide-react';
 
 interface SingleImagePageProps {
 }
@@ -17,10 +17,6 @@ const SingleImage: FC<SingleImagePageProps> = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat" }}>
-      {/* <h2>Single Image Page</h2>
-      <div className="max-h-[80vh]">
-        {imageSrc && <img src={imageSrc} alt="Single Image" className="w-full h-[100%]" />}
-      </div> */}
         <div className="flex flex-row items-center justify-around">
             <Link to={"/"} className="flex cursor-pointer flex-row gap-1 items-center">
                 <MoveLeft color="#FFBA00" size={18} />
