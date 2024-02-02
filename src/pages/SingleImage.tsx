@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { ArrowLeft, Moon, MoveLeft, Sun } from 'lucide-react';
 
@@ -22,10 +22,10 @@ const SingleImage: FC<SingleImagePageProps> = () => {
         {imageSrc && <img src={imageSrc} alt="Single Image" className="w-full h-[100%]" />}
       </div> */}
         <div className="flex flex-row items-center justify-around">
-            <div className="flex flex-row gap-1 items-center">
+            <Link to={"/"} className="flex cursor-pointer flex-row gap-1 items-center">
                 <MoveLeft color="#FFBA00" size={18} />
-                <p className="text-xs text-[#FFBA00]">Back</p>
-            </div>
+                <p className="text-xs text-[#FFBA00] cursor-pointer">Back</p>
+            </Link>
             <div onClick={toggleDarkMode} className={`cursor-pointer ${isDarkMode ? 'text-white' : 'text-[#0C0C0C]'}`}>
                 {isDarkMode ?
                     <Sun size={16} />
